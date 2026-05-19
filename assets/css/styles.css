@@ -206,10 +206,26 @@ footer {
 
 #photography .card {
     border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+#photography .card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
 }
 
 #photography .card-body {
     position: relative;
+}
+
+#photography .badge.bg-warning {
+    background: linear-gradient(135deg, #ffc107 0%, #ff9800) !important;
+    color: white;
+}
+
+#photography .badge.bg-info {
+    background: linear-gradient(135deg, #17a2b8 0%, #0c9fb6) !important;
+    color: white;
 }
 
 #photography .list-unstyled li {
@@ -224,6 +240,10 @@ footer {
 
 #photography .text-success {
     color: #28a745 !important;
+}
+
+#photography .text-warning {
+    color: #ffc107 !important;
 }
 
 /* Projects Section */
