@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>shotbydabarsh | Photography & Development</title>
+    <title>Shotbydabarsh | Photography & Development</title>
     <link rel="icon" type="image/x-icon" href="assets/img/logo.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
@@ -15,7 +15,7 @@
         <div class="container-lg">
             <a class="navbar-brand fw-bold" href="index.html">
                 <img src="assets/img/logo.png" alt="Logo" width="32" height="32" class="me-2">
-                shotbydabarsh
+                @Shotbydabarsh
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -121,42 +121,56 @@
     <section id="projects" class="py-5">
         <div class="container-lg">
             <h2 class="text-center mb-5 display-5 fw-bold">Featured Projects</h2>
-            <div class="row g-4">
-                <div class="col-md-6 col-lg-4">
-                    <div class="card border-0 shadow-sm h-100 transition-hover">
-                        <div class="card-body p-4">
-                            <h5 class="card-title fw-bold mb-3">This Website</h5>
-                            <p class="card-text text-muted mb-3">A modern portfolio built with Bootstrap 5, featuring responsive design and smooth animations. Created to learn and master HTML, CSS, and JavaScript.</p>
-                            <span class="badge bg-info">HTML</span>
-                            <span class="badge bg-info">CSS</span>
-                            <span class="badge bg-info">Bootstrap</span>
+            <div class="row g-5">
+                <div class="col-lg-6">
+                    <div class="project-card h-100">
+                        <div class="project-header">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <div class="project-body">
+                            <h5 class="project-title fw-bold mb-3">This Website</h5>
+                            <p class="project-text text-muted mb-4">A modern portfolio built with Bootstrap 5, featuring responsive design and smooth animations. Created to learn and master HTML, CSS, and JavaScript.</p>
+                            <div class="project-tags">
+                                <span class="badge bg-primary-light">HTML</span>
+                                <span class="badge bg-primary-light">CSS</span>
+                                <span class="badge bg-primary-light">Bootstrap</span>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="card border-0 shadow-sm h-100 transition-hover">
-                        <div class="card-body p-4">
-                            <h5 class="card-title fw-bold mb-3">Gravity Game</h5>
-                            <p class="card-text text-muted mb-3">Interactive physics-based game demonstrating JavaScript fundamentals and creative problem-solving.</p>
-                            <a href="gravityGame/index.html" class="btn btn-sm btn-outline-primary">Play Game</a>
+                <div class="col-lg-6">
+                    <div class="project-card h-100">
+                        <div class="project-header bg-success">
+                            <i class="fas fa-gamepad"></i>
+                        </div>
+                        <div class="project-body">
+                            <h5 class="project-title fw-bold mb-3">Gravity Game</h5>
+                            <p class="project-text text-muted mb-4">Interactive physics-based game demonstrating JavaScript fundamentals and creative problem-solving. Control gravity and navigate through challenging obstacles.</p>
+                            <a href="gravityGame/index.html" class="btn btn-sm btn-success rounded-pill">Play Game <i class="fas fa-arrow-right ms-2"></i></a>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="card border-0 shadow-sm h-100 transition-hover">
-                        <div class="card-body p-4">
-                            <h5 class="card-title fw-bold mb-3">Grade Graph</h5>
-                            <p class="card-text text-muted mb-3">Utility tool for visualizing grade data and academic performance tracking.</p>
-                            <a href="/tools/gradeGraphWeb/index.html" class="btn btn-sm btn-outline-primary">Try Tool</a>
+                <div class="col-lg-6">
+                    <div class="project-card h-100">
+                        <div class="project-header bg-warning">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                        <div class="project-body">
+                            <h5 class="project-title fw-bold mb-3">Grade Graph</h5>
+                            <p class="project-text text-muted mb-4">Utility tool for visualizing grade data and academic performance tracking. Monitor your progress and identify areas for improvement with interactive charts.</p>
+                            <a href="/tools/gradeGraphWeb/index.html" class="btn btn-sm btn-warning rounded-pill text-dark">Try Tool <i class="fas fa-arrow-right ms-2"></i></a>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="card border-0 shadow-sm h-100 transition-hover">
-                        <div class="card-body p-4">
-                            <h5 class="card-title fw-bold mb-3">GitHub</h5>
-                            <p class="card-text text-muted mb-3">Explore more of my projects, contributions, and open-source work on GitHub.</p>
-                            <a href="https://github.com/dabarsh" class="btn btn-sm btn-outline-primary" target="_blank">Visit GitHub</a>
+                <div class="col-lg-6">
+                    <div class="project-card h-100">
+                        <div class="project-header bg-dark">
+                            <i class="fab fa-github"></i>
+                        </div>
+                        <div class="project-body">
+                            <h5 class="project-title fw-bold mb-3">GitHub Portfolio</h5>
+                            <p class="project-text text-muted mb-4">Explore more of my projects, contributions, and open-source work on GitHub. View my development journey and collaborate on interesting initiatives.</p>
+                            <a href="https://github.com/dabarsh" class="btn btn-sm btn-dark rounded-pill" target="_blank">Visit GitHub <i class="fas fa-arrow-right ms-2"></i></a>
                         </div>
                     </div>
                 </div>
@@ -181,7 +195,7 @@
                     <a href="https://www.tiktok.com/@shotbydabarsh" class="social-link" title="TikTok" target="_blank">
                         <i class="fab fa-tiktok"></i>
                     </a>
-                    <a href="https://www.instagram.com/shotbydabarsh" class="social-link" title="Instagram" target="_blank">
+                    <a href="https://www.instagram.com/shotbydabarsh/" class="social-link" title="Instagram" target="_blank">
                         <i class="fab fa-instagram"></i>
                     </a>
                 </div>
