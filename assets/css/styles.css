@@ -1,85 +1,403 @@
-/*Making the Footer Sticky*/
+:root {
+    --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    line-height: 1.6;
     display: flex;
     flex-direction: column;
-}footer {
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
+footer {
     margin-top: auto;
 }
 
-/* Making the footer buttons padded */
-.btn_pad_x_1{
-    padding-right:20px;
-}
-.btn_pad_x_2{
-     padding-left:20px;
+/* Navigation */
+.navbar {
+    box-shadow: var(--shadow-sm);
 }
 
- /* Making the Baskerville text font class*/
-.bvile_font{
-    font-family: Baskerville;
+.navbar-brand {
+    font-size: 1.5rem;
+    letter-spacing: 0.5px;
 }
 
- /* Making The title */
-.title_container{
+.nav-link {
+    position: relative;
+    transition: color 0.3s ease;
+    font-weight: 500;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #fff;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
     width: 100%;
-    height: 725px;
-    text-align: center;
-    background: url(../img/main_bg_home.jpg) no-repeat;
-    background-size: cover;
-    padding-top: 200px;
-    background-position: center center;
-    background-attachment: fixed;
 }
-.title_text{
-    font-size: 38px;
-    color: rgb(255, 255, 255);
-    margin-top:75px;
-    margin-bottom: 75px;
+
+/* Hero Section */
+.hero-section {
+    background: var(--primary-gradient);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
 }
-.title_button {
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    top: -200px;
+    right: -200px;
+}
+
+.hero-section::after {
+    content: '';
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    bottom: -150px;
+    left: -150px;
+}
+
+.hero-section h1 {
+    font-weight: 800;
+    letter-spacing: -1px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    animation: fadeInUp 0.8s ease;
+}
+
+.hero-section .lead {
+    font-size: 1.8rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+    animation: fadeInUp 0.8s ease 0.2s both;
+}
+
+.hero-section .fs-5 {
+    animation: fadeInUp 0.8s ease 0.4s both;
+}
+
+.hero-section .btn {
+    animation: fadeInUp 0.8s ease 0.6s both;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.btn-light, .btn-outline-light {
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+.btn-light:hover {
+    background-color: #f8f9fa;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+}
+
+.btn-outline-light:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: #fff;
+}
+
+/* About Section */
+#about {
+    padding: 80px 0;
+}
+
+#about h2 {
+    margin-bottom: 50px;
+    font-weight: 800;
+    color: #333;
+}
+
+.card {
+    transition: all 0.3s ease;
+    border-radius: 12px;
+}
+
+.card:hover {
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
+}
+
+.card-body h5 {
+    color: #667eea;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.card-body h6 {
+    color: #333;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.text-muted {
+    color: #6c757d !important;
+    font-size: 0.95rem;
+}
+
+/* Photography Section */
+#photography {
+    padding: 80px 0;
+}
+
+#photography h2 {
+    margin-bottom: 50px;
+    font-weight: 800;
+    color: #333;
+}
+
+.badge {
+    font-weight: 600;
+    font-size: 0.85rem;
+    padding: 6px 14px !important;
+    letter-spacing: 0.5px;
+}
+
+.badge.bg-primary {
+    background: var(--primary-gradient) !important;
+}
+
+#photography .card {
+    border-radius: 12px;
+}
+
+#photography .card-body {
+    position: relative;
+}
+
+#photography .list-unstyled li {
+    font-size: 1.05rem;
+    color: #555;
+    transition: all 0.3s ease;
+}
+
+#photography .list-unstyled li:hover {
+    padding-left: 10px;
+}
+
+#photography .text-success {
+    color: #28a745 !important;
+}
+
+/* Projects Section */
+#projects {
+    padding: 80px 0;
+    background: #f8f9fa;
+}
+
+#projects h2 {
+    margin-bottom: 50px;
+    font-weight: 800;
+    color: #333;
+}
+
+.transition-hover {
+    transition: all 0.3s ease;
+}
+
+.transition-hover:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+}
+
+.card-title {
+    color: #333;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.card-text {
+    color: #666;
+    line-height: 1.8;
+}
+
+.badge {
+    margin-right: 5px;
+    margin-bottom: 8px;
+}
+
+.badge.bg-info {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+}
+
+.btn-outline-primary {
+    color: #667eea;
+    border-color: #667eea;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-primary:hover {
+    background-color: #667eea;
+    border-color: #667eea;
+}
+
+/* Contact Section */
+#contact {
+    padding: 80px 0;
+}
+
+#contact h2 {
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+.social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.15);
+    color: white;
+    border-radius: 50%;
+    margin: 0 10px;
+    transition: all 0.3s ease;
+    font-size: 1.5rem;
     text-decoration: none;
-    font-size: 20px;
-    border-radius: 50px;
-    border: 1px solid white;
-    color: rgb(2, 94, 110);
-    padding: 20px 50px;
-    background-color: white;
-    font-weight: bold;
-}
-/* Making the the padding of the containter of the text boxes*/
-.content_box{
-    padding: 15px 0 15px;
-}
-.main_area_container{
-    margin: 150px auto 50px;
-    width: 80%;
-}
-/* Making the the designs of the Text Boxes*/
-.content_box_title{
-    text-align: center;
-    background-color: #0d6efd;
-    padding: 20px 0;
-}
-.content_box_pharagraph{
-    text-align: center;
-    background-color: #0d57ca;
-    padding: 40px 0;
-    font-size: 18px;
 }
 
-/* Making the Styles for the About Me Section*/
-.about_me_text_container{
-    display:inline-block;
-    text-align: center;
-}
-.about_me_image_containter{
-    display:inline-block;
+.social-link:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: scale(1.15) translateY(-3px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
+/* Footer */
+footer {
+    background: #1a1a1a;
+    color: #fff;
+    padding: 30px 0;
+    margin-top: auto;
+}
 
+footer p {
+    margin: 0;
+    font-weight: 500;
+}
 
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
 
+    .hero-section .lead {
+        font-size: 1.2rem;
+    }
 
+    .display-5 {
+        font-size: 2rem;
+    }
 
+    .card-body {
+        padding: 2rem 1.5rem !important;
+    }
 
+    .social-link {
+        width: 45px;
+        height: 45px;
+        font-size: 1.2rem;
+        margin: 0 8px;
+    }
+
+    #about, #photography, #projects, #contact {
+        padding: 50px 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-section {
+        min-height: auto;
+        padding: 60px 0;
+    }
+
+    .hero-section h1 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .hero-section .lead {
+        font-size: 1rem;
+    }
+
+    .display-5 {
+        font-size: 1.75rem;
+    }
+
+    .btn-light, .btn-outline-light {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .nav-link::after {
+        display: none;
+    }
+
+    .card-body {
+        padding: 1.5rem !important;
+    }
+}
+
+/* Utility Classes */
+.fw-bold {
+    font-weight: 700;
+}
+
+.fw-light {
+    font-weight: 300;
+}
+
+.text-white-50 {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.container-lg {
+    max-width: 1200px;
+}
